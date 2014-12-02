@@ -1,0 +1,19 @@
+# Site settings
+baseurl: ""
+exclude: [
+  ".bundle",
+  ".bowerrc",
+  ".gitignore",
+  "bower.json",
+  "gulpfile.js",
+  "Gemfile",
+  "Gemile.lock",
+  "install.sh",
+  "node_modules",
+  "package.json",
+  "public/sass",
+  "vendor",
+]
+
+# Build settings
+markdown: kramdown

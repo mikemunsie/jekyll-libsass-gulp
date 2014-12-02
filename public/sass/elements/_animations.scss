@@ -1,0 +1,43 @@
+@import "config";
+@import "../mixins/transitions";
+
+@include animation("dropdown") {
+  0% {
+    @include helpers-opacity(0);
+    @include animate-prefix("transform", "translateY(-20px)");
+  }
+  100% {
+    @include helpers-opacity(1);
+    @include animate-prefix("transform",  "translateY(0px)");
+  }
+}
+
+@include animation("slideDown") {
+  0% {
+    @include helpers-opacity(0);
+    @include animate-prefix("transform", "translateY(-20px)");
+  }
+  100% {
+    @include helpers-opacity(1);
+    @include animate-prefix("transform",  "translateY(0px)");
+  }
+}
+
+@include animation("fadeIn") {
+  0% {
+    @include helpers-opacity(0);
+  }
+  100% {
+    @include helpers-opacity(1);
+  }
+}
+
+
+@include animation("fadeOut") {
+  0% {
+    @include helpers-opacity(1);
+  }
+  100% {
+    @include helpers-opacity(0);
+  }
+}

@@ -1,0 +1,18 @@
+@import "config";
+
+// Normalize
+@import "../vendor/inuit-normalize/generic.normalize";
+
+// Elements
+@import "elements/animations";
+@import "elements/footer";
+@import "elements/header";
+
+body {
+  background: white;
+}
+
+.content {
+  padding: 20px;
+  @include animate("fadeIn");
+}

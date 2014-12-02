@@ -1,0 +1,70 @@
+@mixin helpers-opacity($value) {
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin helpers-border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin helpers-transparentClickable {
+  background: url("/public/images/transparent.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  cursor: hand;
+  cursor: pointer;
+}
+
+@mixin helpers-arrow($color: white, $borderColor: #ccc, $size: 7px, $top: -7px, $left: auto, $right: 7px, $bottom: auto) {
+  &:before {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    display: inline-block;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $borderColor;
+    border-left: $size solid transparent;
+    border-bottom-color: $size solid $borderColor;
+    content: "";
+  }
+  &:after {
+    position: absolute;
+    top: $top + 1px;
+    left: $left + 1px;
+    right: $right + 1px;
+    bottom: $bottom;
+    display: inline-block;
+    border-right: $size - 1px solid transparent;
+    border-bottom: $size - 1px solid $color;
+    border-left: $size - 1px solid transparent;
+    content: "";
+  }
+}
+
+@mixin respond-at($min: false, $max: false) {
+  @if $min == false {
+    @media only screen and (max-width: $max) {
+      @content;
+    }
+  }
+  @else if $max == false {
+    @media only screen and (min-width: $min) {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}

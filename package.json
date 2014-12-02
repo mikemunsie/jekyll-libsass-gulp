@@ -1,0 +1,23 @@
+{
+  "name": "Jekyll-Libsass-Gulp",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "gulp": "*",
+    "gulp-clean": "*",
+    "gulp-if": "*",
+    "gulp-plumber": "*",
+    "gulp-sass": "*",
+    "gulp-shell": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "lodash-node": "*",
+    "node-sass": "*",
+    "q": "*"
+  },
+  "devDependencies": {
+    "bower": "*",
+    "browser-sync": "*"
+  }
+}

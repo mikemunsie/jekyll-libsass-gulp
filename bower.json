@@ -1,0 +1,27 @@
+{
+  "name": "VOPPrototype",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "angularjs": "*",
+    "angular-animate": "*",
+    "angular-cookies": "*",
+    "angular-dialog-service": "*",
+    "angular-local-storage": "*",
+    "angular-mocks": "*",
+    "angular-resource": "*",
+    "angular-route": "*",
+    "angular-sanitize": "*",
+    "bootstrap": "*",
+    "bootstrap-sass-official": "3.3.0",
+    "bourbon": "4.0.2",
+    "compass-mixins": "1.0.1",
+    "d3": "*",
+    "font-awesome": "4.2.0",
+    "inuit-normalize": "3.0.1",
+    "lodash": "*",
+    "susy": "2.1.3",
+    "jquery": "1.11.1",
+    "SyntaxHighlighter": "*"
+  }
+}
